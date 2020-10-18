@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-a11y="true"></script>
+    <title>Blogin</title>
+</head>
+<body>
+    <div class="screen2" onclick="toogleMenu()"></div>
+    <header class="main-header">
+        <nav class="main-nav container flex space-between align-center">
+            <div class="logo">Blogin<span class="dot">.</span></div>
+            
+            <ul class="nav-list flex justify-center align-center">
+                <button class="close-btn" onclick="toogleMenu()">X</button>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+           
+            <button class="hamburger fas fa-bars" onclick="toogleMenu()"></button>
+        </nav>
+    </header>
+    
+    <main class="main-content container">
+        <section class="modal">
+            <h1>Join us to get access to the latest stories!</h1>
+                <label for="email-form">Enter your email:</label>
+                 <input type="email"  id="email-form" name="email" placeholder="Enter Your Email">
+                
+            <div class="buttons-modal">
+            <button class="btn-close-modal" onclick="toggleModal()">close</button>
+            <button class="btn-close-modal" onclick="toggleModal()">submit</button>
+        </div>
+        </section>
+        <div class="post-container flex">
+            <img src="img/imgs-post/001.png" class="img-post">
+            <div class="content-post">
+            <h2 class="post-title">Duis aute irure dolor in 
+                henderit in voluptate.</h2>
+                <p class="post-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p class="post-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    
+                    <button class="read-more-btn" onclick="toggleModal()">Continue Reading  </button>                </div>
+        </div>
+        <div class="post-container flex">
+            <img src="img/imgs-post/002.png" class="img-post">
+            <div class="content-post">
+            <h2 class="post-title">Duis aute irure dolor in 
+                henderit in voluptate.</h2>
+                <p class="post-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p class="post-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    
+                    <button class="read-more-btn" onclick="toggleModal()">Continue Reading  </button>
+
+                </div>
+        </div>
+        <div class="post-container flex">
+            <img src="img/imgs-post/003.png" class="img-post">
+            <div class="content-post">
+            <h2 class="post-title">Duis aute irure dolor in 
+                henderit in voluptate.</h2>
+                <p class="post-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p class="post-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    
+                    <button class="read-more-btn" onclick="toggleModal()">Continue Reading  </button>
+
+                </div>
+        </div>
+
+        <div class="post-navigation-container flex space-between">
+            <button class="prev-btn">&larr; Previous</button>
+            <button class="next-btn">Next &rarr;</button>
+
+        </div>
+
+    </main>
+    <footer class="main-footer flex colum justify-center align-center">
+        <div class="logo">Blogin<span class="dot">.</span></div>
+        <div class="copy-rights">© 2014 Blogin.com  -  All Rights Reserved  -  Find more free Templates ats <span class="link-footer"> Pixelhint.com</span></div>
+        <ul class="nav-social flex justify-center">
+            <li class="footer-icon face"> <i class="icon-fa fab fa-facebook-f"></i></li>
+            <li class="footer-icon twit"> <i class="icon-fa fab fa-twitter"></i></li>
+            <li class="footer-icon behan"> <i class="icon-fa fab fa-behance"></i></li>
+            <li class="footer-icon drib"> <i class="icon-fa fas fa-basketball-ball"></i></li>
+        </ul>
+    </footer>
+    <script>
+        function toogleMenu(){
+            document.querySelector('.nav-list').classList.toggle('open-menu');
+            document.body.classList.toggle('screen');
+        }
+
+  function toggleModal() {
+            var currDisplay = document.querySelector('.modal').style.display;
+            document.body.classList.toggle('screen');
+            if (currDisplay === 'block') currDisplay = 'none';
+            else currDisplay = 'block';
+            document.querySelector('.modal').style.display = currDisplay;
+        }
+    </script>
+</body>
+</html>
